@@ -1,0 +1,11 @@
+CharSequence[] cityList = {"Jabodetabek", "Bandung", "Surabaya", "Bali", "Makassar", "Pekanbaru", "Batam", "Palembang"};
+
+AlertDialog.Builder builder = new AlertDialog.Builder(this);
+     builder.setItems(cityList, new DialogInterface.OnClickListener() {
+     @Override
+     public void onClick(DialogInterface dialog, int which) {
+             editText.setText(cityList[which]);
+                }
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
